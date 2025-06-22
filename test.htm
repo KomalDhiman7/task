@@ -1,0 +1,390 @@
+<!DOCTYPE html> 
+<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Scripbox - Mutual Funds to Invest in India</title> 
+<script src="https://cdn.tailwindcss.com"></script> <style>
+input[type="checkbox"] { position: relative; width: 18px; height: 18px; margin-right: 8px; appearance: none; -webkit-appearance: none; background-color: #fff; border: 1.5px solid #b6b6b6; border-radius: 3px; vertical-align: middle; cursor: pointer; } input[type="checkbox"]:checked { background-color: #06b6d4; border-color: #06b6d4; background-image: url("data:image/svg+xml,%3csvg fill='none' stroke='%23fff' stroke-width='3' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'%3e%3c/path%3e%3c/svg%3e"); background-position: center; background-repeat: no-repeat; } /* Custom scrollbar for the table container */ .custom-scrollbar::-webkit-scrollbar { height: 8px; } .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 10px; }
+#drop-hint.dragover {
+  border-color: #06b6d4;
+  background-color: #ecfeff;
+  color: #0e7490;
+}
+
+</style>
+ </head>
+  <body class="min-h-screen bg-white font-sans text-gray-900"> 
+    <!-- HEADER -->
+    <header class="border-b border-gray-200"> <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6"> <a href="#" class="flex items-center space-x-1">
+  <span class="text-sky-600 font-extrabold text-xl">scripbox</span> <span class="ml-1 text-[10px] font-bold text-white bg-sky-600 rounded px-[5px] py-[1px]">S</span> </a> 
+  <nav class="hidden md:flex space-x-8 text-gray-600 text-sm font-medium"> 
+    <a href="#" class="hover:text-gray-900">Mutual Funds</a> 
+    <a href="#" class="hover:text-gray-900">Research</a> 
+    <a href="#" class="hover:text-gray-900">Financial Planning</a> 
+    <a href="#" class="hover:text-gray-900">Fee</a>
+ </nav>
+<div class="hidden md:flex items-center space-x-4"> 
+    <button class="text-gray-700 hover:text-gray-900 font-medium">Login</button>
+    <button class="bg-green-600 hover:bg-green-700 text-white font-medium text-sm px-4 py-2 rounded-md transition"> Sign up </button> 
+</div> 
+</div> 
+</header> 
+<!-- MAIN SECTION --> 
+<main class="max-w-7xl mx-auto px-6 py-8"> <!-- Breadcrumb --> 
+    <nav class="mb-3 text-gray-500 text-xs flex items-center space-x-2" aria-label="Breadcrumb"> 
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> 
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" /> </svg> 
+            <a href="#" class="hover:underline">Home</a> 
+            <span>&gt;</span> 
+            <a href="#" class="hover:underline font-medium text-gray-900">Mutual Funds</a> 
+    </nav> 
+<!-- Title and Description --> 
+<section> 
+    <h1 class="text-3xl font-extrabold mb-3 tracking-tight">Mutual Funds to Invest in India</h1> 
+    <p class="text-gray-700 max-w-3xl leading-relaxed text-base"> Scripbox has listed various Mutual Fund schemes across different asset classes along with the necessary information to help you make an informed decision. You can filter as per the funds based on the categories of mutual funds. The screener will help you analyze the funds on parameters like fund type, AUM, minimum amount, age, and returns. </p> 
+</section> <div class="flex gap-6 mt-10"> 
+
+<!-- Filters Column --> 
+<aside class="flex-shrink-0 w-60 border border-gray-200 rounded-md p-4 divide-y divide-gray-300"> 
+    <div class="flex justify-between mb-2 items-center"> 
+        <span class="font-semibold text-gray-700 text-sm">Filters</span> 
+        <button type="button" class="text-gray-500 text-xs border border-gray-300 rounded px-2 py-[2px] hover:bg-gray-100 flex items-center gap-1"> Reset Filters 
+            <span class="bg-gray-200 rounded px-1 text-xs font-semibold">2</span> 
+        </button>
+    </div>
+
+    <div class="pb-4">
+    <h3 class="font-bold mb-1 text-sm text-gray-700">Scripbox Opinion</h3>
+    <label class="inline-flex items-center mb-2 cursor-pointer">
+      <input type="checkbox" class="mr-2" />
+      <span class="relative rounded px-1 py-[1px] text-xs font-semibold text-orange-700 bg-orange-200">Recommended</span>
+    </label>
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" checked class="mr-2" />
+      <span class="inline-flex items-center gap-1 text-white text-xs font-semibold rounded px-1 py-[1px] bg-cyan-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" stroke="none" />
+          <path stroke-linejoin="round" d="M9 12l2 2 4-4" />
+        </svg>
+        Top Ranked
+      </span>
+    </label>
+  </div>
+
+  <div class="pt-4">
+    <h3 class="font-bold mb-3 text-sm text-gray-700">Fund Category</h3>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      Equity
+    </label>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      Debt
+    </label>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      Hybrid
+    </label>
+    <label class="block cursor-pointer mb-2">
+        <input type="checkbox" class="mr-2 inline align-middle" />
+        International Equity
+    </label>
+    <label class="block cursor-pointer mb-2">
+        <input type="checkbox" class="mr-2 inline align-middle" />
+        Solution Oriented
+    </label>
+  </div>
+  <div class="pt-4">
+    <h3 class="font-bold mb-3 text-sm text-gray-700">Fund House</h3>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      Aditya Birla Sun Life Income Fund Direct (G)
+    </label>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      ICICI Prudential Medium Term Bond Fund Direct (G)
+    </label>
+    <label class="block cursor-pointer mb-2">
+      <input type="checkbox" class="mr-2 inline align-middle" />
+      SBI Multi Asset Allocation Fund Direct (G)
+    </label>
+  </div>
+
+
+  <div id="drop-hint" class="mt-8 border-2 border-dashed border-gray-300 rounded-md p-6 text-center text-gray-500 text-sm cursor-pointer hover:bg-gray-50">
+  👉 Drag and drop <strong>any 2 funds</strong> here to compare 📊
+</div>
+</aside>
+
+
+
+<!-- Table and Filters Right -->
+<section class="flex-1">
+  <div class="flex justify-between items-center mb-4 text-gray-600 text-sm">
+    <div>
+      Showing 21 to 40 of 284 funds
+    </div>
+    <div>
+      <select class="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 cursor-pointer">
+        <option>Direct Funds</option>
+        <option>All Funds</option>
+        <option>Regular Funds</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto rounded-md border border-gray-200 custom-scrollbar">
+    <table class="w-full text-left text-gray-800 text-sm border-collapse">
+      <thead class="bg-gray-50 border-b border-gray-300">
+        <tr>
+          <th class="py-3 px-4 font-semibold cursor-pointer select-none">Fund name</th>
+          <th class="py-3 px-4 font-semibold cursor-pointer select-none">AUM <span class="inline-block transform rotate-90 text-gray-400 text-xs">▲</span></th>
+          <th class="py-3 px-4 font-semibold cursor-pointer select-none">1Y CAGR <span class="inline-block transform rotate-90 text-gray-400 text-xs">▲</span></th>
+          <th class="py-3 px-4 font-semibold cursor-pointer select-none">3Y CAGR <span class="inline-block transform rotate-90 text-gray-400 text-xs">▲</span></th>
+          <th class="py-3 px-4 font-semibold cursor-pointer select-none">Till Date CAGR <span class="inline-block transform rotate-90 text-gray-400 text-xs">▲</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+          <td class="py-4 px-4 flex items-center gap-2">
+            <img src="https://dezerv-profile-images.s3.ap-south-1.amazonaws.com/amc-images/kotak-1672859351.png" alt="Kotak Logo" class="w-6 h-6" loading="lazy" />
+            <div>
+              Kotak Equity Savings Fund Direct (G)
+            </div>
+          </td>
+          <td class="py-4 px-4 font-semibold">₹ 8,254 Cr</td>
+          <td class="py-4 px-4 font-semibold">6.8%</td>
+          <td class="py-4 px-4 font-semibold">14%</td>
+          <td class="py-4 px-4 font-semibold">10.3%</td>
+        </tr>
+
+        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+          <td class="py-4 px-4 flex items-center gap-2">
+            <img src="https://assets-netstorage.groww.in/mf-assets/logos/union_groww.png" alt="Kotak Hybrid Logo" class="w-6 h-6" loading="lazy" />
+            <div>
+              Kotak Equity Hybrid Fund Direct (G)
+            </div>
+          </td>
+          <td class="py-4 px-4 font-semibold">₹ 7,413 Cr</td>
+          <td class="py-4 px-4 font-semibold">7.6%</td>
+          <td class="py-4 px-4 font-semibold">20.8%</td>
+          <td class="py-4 px-4 font-semibold">14.5%</td>
+        </tr>
+
+        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+          <td class="py-4 px-4 flex items-center gap-2">
+            <img src="https://images.dhan.co/Mutual_Fund/amc_images/light/27488.png" alt="Invesco Logo" class="w-6 h-6" loading="lazy" />
+            <div>
+              Invesco India Aggressive Hybrid Fund Direct (G)
+            </div>
+          </td>
+          <td class="py-4 px-4 font-semibold">₹ 704 Cr</td>
+          <td class="py-4 px-4 font-semibold">8.5%</td>
+          <td class="py-4 px-4 font-semibold">23%</td>
+          <td class="py-4 px-4 font-semibold">14.2%</td>
+        </tr>
+
+        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+            <td class="py-4 px-4 flex items-center gap-2">
+              <img src="https://stack-cms-file-store.s3.ap-south-1.amazonaws.com/Aditya_Birla_Sun_Life_PSU_Equity_Fund_Growth_ind5g0_be637aac0e.png" alt="aditya-birla-sun-life-logo " class="w-6 h-6" loading="lazy" />
+              <div>
+                
+                    Aditya Birla Sun Life Floating Rate Fund Direct (G)
+              </div>
+            </td>
+            <td class="py-4 px-4 font-semibold">₹ 13,658 Cr</td>
+            <td class="py-4 px-4 font-semibold">8.7%</td>
+            <td class="py-4 px-4 font-semibold">7.9%</td>
+            <td class="py-4 px-4 font-semibold">8%</td>
+          </tr>
+
+          <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+            <td class="py-4 px-4 flex items-center gap-2">
+              <img src="https://stack-cms-file-store.s3.ap-south-1.amazonaws.com/Aditya_Birla_Sun_Life_PSU_Equity_Fund_Growth_ind5g0_be637aac0e.png" alt="Aditya Birla Sun Life Income Fund Direct Logo" class="w-6 h-6" loading="lazy" />
+              <div>
+                Aditya Birla Sun Life Income Fund Direct (G)
+              </div>
+            </td>
+            <td class="py-4 px-4 font-semibold">₹ 2,317 Cr</td>
+            <td class="py-4 px-4 font-semibold">8.7%</td>
+            <td class="py-4 px-4 font-semibold">8%</td>
+            <td class="py-4 px-4 font-semibold">8%</td>
+          </tr>
+
+
+          <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+            <td class="py-4 px-4 flex items-center gap-2">
+              <img src="https://assets-netstorage.groww.in/mf-assets/logos/icici_groww.png" alt="ICICI Prudential Medium Term Bond Fund Direct Logo" class="w-6 h-6" loading="lazy" />
+              <div>
+                ICICI Prudential Medium Term Bond Fund Direct (G)
+              </div>
+            </td>
+            <td class="py-4 px-4 font-semibold">₹5,732 Cr</td>
+            <td class="py-4 px-4 font-semibold">10.1%</td>
+            <td class="py-4 px-4 font-semibold">8.7%</td>
+            <td class="py-4 px-4 font-semibold">8.6%</td>
+          </tr>
+
+
+          <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+            <td class="py-4 px-4 flex items-center gap-2">
+              <img src="https://img.smartspends.com/static/images/amc_logo/hdfc.png" alt="HDFC Medium Term Debt Fund Direct Logo" class="w-6 h-6" loading="lazy" />
+              <div>
+                HDFC Medium Term Debt Fund Direct (G)
+              </div>
+            </td>
+            <td class="py-4 px-4 font-semibold">₹ 3,887 Cr</td>
+            <td class="py-4 px-4 font-semibold">9.6%</td>
+            <td class="py-4 px-4 font-semibold">8.5%</td>
+            <td class="py-4 px-4 font-semibold">8.3%</td>
+          </tr>
+
+        <!-- Additional rows can be added here as needed -->
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+</div> </main> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+let openInfoIds = new Set();
+let draggedFunds = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll("tbody tr");
+  const dropHint = document.getElementById("drop-hint");
+  const aside = document.querySelector("aside");
+
+  // Add draggable to each row
+  rows.forEach((row, index) => {
+    const fundName = row.querySelector("td:nth-child(1)").innerText.trim();
+    const aum = row.querySelector("td:nth-child(2)").innerText;
+    const cagr1Y = row.querySelector("td:nth-child(3)").innerText;
+
+    row.setAttribute("draggable", true);
+    row.setAttribute("data-id", index);
+
+    // Toggle extra info on click
+    row.addEventListener("click", () => {
+      const fundId = row.getAttribute("data-id");
+      if (openInfoIds.has(fundId)) {
+        row.nextSibling?.remove();
+        openInfoIds.delete(fundId);
+      } else {
+        const infoRow = document.createElement("tr");
+        infoRow.innerHTML = `
+          <td colspan="5">
+            <div class="p-4 bg-cyan-50 border border-cyan-200 rounded-md text-sm text-gray-800">
+              <strong>${fundName}</strong><br/>
+              AUM: ${aum}<br/>
+              1Y CAGR: ${cagr1Y}<br/>
+              Click again to hide.
+            </div>
+          </td>`;
+        row.parentNode.insertBefore(infoRow, row.nextSibling);
+        openInfoIds.add(fundId);
+      }
+    });
+
+    // Set drag data
+    row.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", JSON.stringify({ id: index, fundName, aum, cagr1Y }));
+    });
+  });
+
+  // Drop target setup
+  dropHint.addEventListener("dragover", (e) => e.preventDefault());
+  dropHint.addEventListener("dragenter", () => dropHint.classList.add("bg-cyan-50", "border-cyan-400"));
+  dropHint.addEventListener("dragleave", () => dropHint.classList.remove("bg-cyan-50", "border-cyan-400"));
+
+  dropHint.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropHint.classList.remove("bg-cyan-50", "border-cyan-400");
+
+    if (draggedFunds.length >= 2) return;
+
+    const data = JSON.parse(e.dataTransfer.getData("text/plain"));
+    if (draggedFunds.some(f => f.id == data.id)) return;
+
+    draggedFunds.push(data);
+    updateCompareSidebar();
+  });
+});
+
+// Update comparison directly inside the sidebar
+function updateCompareSidebar() {
+  const container = document.getElementById("drop-hint");
+  container.innerHTML = '';
+
+  draggedFunds.forEach((fund, i) => {
+    const div = document.createElement("div");
+    div.className = "text-sm font-semibold mb-2";
+    div.innerText = `${i + 1}. ${fund.fundName}`;
+    container.appendChild(div);
+  });
+
+  if (draggedFunds.length === 2) {
+    const [f1, f2] = draggedFunds;
+
+    const result = document.createElement("div");
+    result.className = "p-4 bg-gray-100 rounded-md text-sm mb-2";
+    result.innerHTML = `
+      <strong>AUM Difference:</strong> ₹${Math.abs(parseAmount(f1.aum) - parseAmount(f2.aum)).toLocaleString()} Cr<br/>
+      <strong>1Y CAGR Difference:</strong> ${Math.abs(parseFloat(f1.cagr1Y) - parseFloat(f2.cagr1Y)).toFixed(2)}%
+    `;
+    container.appendChild(result);
+
+    const canvas = document.createElement("canvas");
+    canvas.id = "compare-chart";
+    canvas.className = "mt-2 w-full max-w-xs mx-auto";
+    container.appendChild(canvas);
+
+    new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: ["AUM (Cr)", "1Y CAGR (%)"],
+        datasets: [
+          {
+            label: f1.fundName,
+            data: [parseAmount(f1.aum), parseFloat(f1.cagr1Y)],
+            backgroundColor: "#06b6d4"
+          },
+          {
+            label: f2.fundName,
+            data: [parseAmount(f2.aum), parseFloat(f2.cagr1Y)],
+            backgroundColor: "#f97316"
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "bottom" } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    const resetBtn = document.createElement("button");
+    resetBtn.innerText = "Reset Comparison";
+    resetBtn.className = "mt-4 bg-red-500 text-white px-3 py-2 text-sm rounded";
+    resetBtn.onclick = resetComparison;
+    container.appendChild(resetBtn);
+  }
+}
+
+// Helper to remove ₹, commas, Cr
+function parseAmount(str) {
+  return parseFloat(str.replace(/[₹,Cr ]/g, "")) || 0;
+}
+
+// Reset comparison
+function resetComparison() {
+  draggedFunds = [];
+  const dropHint = document.getElementById("drop-hint");
+  dropHint.innerHTML = '👉 Drag and drop <strong>any 2 funds</strong> here to compare 📊';
+}
+</script>
+
+
+</body>
+ </html>
